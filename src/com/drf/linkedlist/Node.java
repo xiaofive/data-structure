@@ -1,9 +1,9 @@
 package com.drf.linkedlist;
-
-/**
- *      链表节点定义
- * @author 汪洋
- *
+/*
+ * @Description:閾捐〃鑺傜偣瀹氫箟 
+ * @Version: 2.0
+ * @Autor: wang Y
+ * @Date: 2021-12-23 10:42:59
  */
 public class Node {
 
