@@ -191,25 +191,24 @@ public class MyLinkedList {
 	}
 
 	/**
-	 * 单向链表反转,返回反转后的头节点
+	 * 单向链表反转,返回反转后的头节点(双指针法-就地反转)
 	 */
 	public Node revert(){
 		if(this.head==null || this.head.next==null){
 			return this.head;
 		}
 
-		Node cur = this.head;
-		Node next = this.head.next;
-		//借助一个中间变量记录原始下一个节点指向，以便于向下遍历
-		Node tmp = null;
-		while(next!=null){
-			tmp = next;
-			next.next = cur;
-			cur = next;
-			next = tmp;
+		Node p1 = this.head;
+		Node p2 = this.head.next;
+		Node p3 = null; //中间变量
+		while(p2!=null){
+			p3 = p2.next;
+			p2.next = p1; //反转 
+			p1 = p2;
+			p2 = p3;
 		}
 		head.next = null;
-		this.head = cur;
+		this.head = p1;
 		return head;
 	}
 
@@ -228,6 +227,15 @@ public class MyLinkedList {
 			}
 		} 
 		return false;
+	}
+
+	/**
+	 * 链表排序
+	 * 1.插入排序
+	 * 2.归并排序
+	 */
+	public void sort(){
+
 	}
 
 	/**
